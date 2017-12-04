@@ -1,9 +1,12 @@
 {
-  "name": "test-starter",
-  "version": "1.0.0",
-  "description": "",
+  "name": "cep-starter",
+  "version": "0.0.1",
+  "description": "A starter project for developing CEP extensions using cep-bundler and cep-packager",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "cep-bundler": "latest",
+    "cep-bundler": "latest"
+  },
   "devDependencies": {
     "@types/debug": "0.0.30",
     "@types/node": "^8.0.26",
