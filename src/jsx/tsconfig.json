@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "../../build/jsx",
+    "allowJs": true,
+    "target": "es3",
+    "strict": true,
+    "types": [
+      "aftereffects.d.ts"
+    ],
+    "typeRoots": [
+      "../node_modules"
+    ],
+    "lib": ["es2015"]
+  },
+  "include": [
+    "./**/*"
+  ],
+  "exclude": []
+}
