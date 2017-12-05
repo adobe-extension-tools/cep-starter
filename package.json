@@ -24,8 +24,8 @@
     "redux-thunk": "^2.2.0",
     "remote-redux-devtools": "^0.5.12",
     "typescript": "^2.6.2",
-    "cep-bundler": "latest",
-    "cep-packager": "latest"
+    "cep-bundler": "^0.0.2",
+    "cep-packager": "^0.0.2"
   },
   "scripts": {
     "start": "cep-bundler",
