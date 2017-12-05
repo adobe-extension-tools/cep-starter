@@ -1,12 +1,9 @@
 {
   "name": "cep-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A starter project for developing CEP extensions using cep-bundler and cep-packager",
   "main": "index.js",
-  "dependencies": {
-    "cep-bundler": "latest",
-    "cep-bundler": "latest"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/debug": "0.0.30",
     "@types/node": "^8.0.26",
@@ -25,7 +22,10 @@
     "redux": "^3.7.2",
     "redux-simple-logger": "0.0.4",
     "redux-thunk": "^2.2.0",
-    "remote-redux-devtools": "^0.5.12"
+    "remote-redux-devtools": "^0.5.12",
+    "typescript": "^2.6.2",
+    "cep-bundler": "latest",
+    "cep-packager": "latest"
   },
   "scripts": {
     "start": "cep-bundler",
