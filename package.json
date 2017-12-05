@@ -30,7 +30,7 @@
   "scripts": {
     "start": "cep-bundler",
     "build": "cep-bundler build",
-    "package": "cep-packager"
+    "package": "cep-bundler build && cep-packager"
   },
   "author": "Koen Schmeets",
   "license": "MIT"
