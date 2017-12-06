@@ -23,20 +23,19 @@ declare global {
   }
 }
 
-const fs = window.nodeRequire('fs')
-
 function evalJsx(code: string): Promise<void> {
   return new Promise(resolve => {
     window.__adobe_cep__.evalScript(code, () => resolve())
   })
 }
 
-function setJsxEnv(env: object): void {
-  evalJsx(`$.global.env = ${JSON.stringify(env)}`)
-}
-
 function loadJsx(): void {
-  const contents = fs.readFileSync('/PATH/TO/YOUR/cep-starter/bundle/index.jsx', 'utf8')
+  // this require is needed for the brfs module
+  const fs = require('fs')
+  // this fs.readFileSync will be replaced with the contents of the bundle file by brfs
+  // the JSX_BUNDLE_PATH environment variable is provided by the bundler
+  // will be replaced with the actual value by the envify module
+  const contents = fs.readFileSync(process.env.JSX_BUNDLE_PATH, 'utf8')
   evalJsx(contents)
 }
 
@@ -53,8 +52,6 @@ function getAppEl() {
   return appEl
 }
 
-const hostEnv = JSON.parse(window.__adobe_cep__.getHostEnvironment())
-setJsxEnv(hostEnv)
 loadJsx()
 
 ReactDOM.render(
