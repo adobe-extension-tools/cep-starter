@@ -44,6 +44,14 @@ npm install
 npm start
 ```
 
+Wait for the packager to have started, then open the program you are targetting.
+You can find the extension under `Window -> Extensions -> CEP Starter`.
+Once opened, look for the debug port (or set it yourself) in the `cep-config.js` and visit `http://localhost:DEBUG_PORT_HERE` in a Chrome browser (it doesn't work in Firefox).
+Now click on the blue link and you will be taken to the debugger.
+If you are using version CC2017 or older, go to the settings page (little cog icon on the top right) and disable JavaScript sourcemaps, if you don't do this the debugger will crash, this is *not* necessary for CC2018.
+
+Happy coding!
+
 ## build & package
 
 ```shell
