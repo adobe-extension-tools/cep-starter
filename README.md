@@ -52,7 +52,7 @@ npm run package
 
 ## under the hood
 
-When you run `npm run build` the following things happen
+When you run `npm run build` the following things happen:
 
 | **action**           | **description**                                                           |
 |----------------------|---------------------------------------------------------------------------|
@@ -66,3 +66,24 @@ When you run `npm run build` the following things happen
 | copyNodeModules      | Copies the "production" `node_modules` into `$BUNDLE/node_modules`        |
 | browserifyBundleJs   | Compiles `build/js/**.js` into `$BUNDLE/index.js`                         |
 | browserifyBundeJsx   | Compiles `build/jsx/**.js` into `$BUNDLE/index.jsx`                       |
+
+
+When you run `npm start` the following things happen:
+
+| **action**           | **description**                                                                       |
+|----------------------|---------------------------------------------------------------------------------------|
+| createHtml           | Creates the `$BUNDLE/index.html` file from the html template                          |
+| createManifest       | Creates the `$BUNDLE/CSXS/manifest.xml` from the `cep-config.js` settings             |
+| createDebug          | Creates the `$BUNDLE/.debug` file from the `cep-config.js` settings                   |
+| typescriptCompileJs  | Compiles `src/js/**.ts` into `build/js/**.js`                                         |
+| typescriptCompileJsx | Compiles `src/jsx/**.ts` into `build/jsx/**.js`                                       |
+| copyAssets           | Copies `src/assets/**` into `build/assets/**`                                         |
+| copyPublic           | Copies `public` into `$BUNDLE`                                                        |
+| copyNodeModules      | Copies the "production" `node_modules` into `$BUNDLE/node_modules`                    |
+| browserifyBundleJs   | Compiles `build/js/**.js` into `$BUNDLE/index.js`                                     |
+| browserifyBundeJsx   | Compiles `build/jsx/**.js` into `$BUNDLE/index.jsx`                                   |
+| symlink              | Symlinks `bundle` into `/Library/Application Support/Adobe/CEP/extensions/$BUNDLE_ID` |
+| typescriptWatchJs    | Compiles `src/js/**.ts` into `build/js/**.js` and watches for changes                 |
+| typescriptWatchJsx   | Compiles `src/jsx/**.ts` into `build/jsx/**.js` and watches for changes               |
+| browserifyWatchJsx   | Compiles `build/js/**.js` into `$BUNDLE/index.jsx`, watches for changes, live reloads |
+| browserifyWatchJs    | Compiles `build/jsx/**.js` into `$BUNDLE/index.js`, watches for changes, live reloads |
