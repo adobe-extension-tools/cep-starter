@@ -1,5 +1,5 @@
-const name = 'CEP Tools Demo'
-const bundleId = 'com.ceptools.demo'
+const name = 'CEP Starter'
+const bundleId = 'com.aedt.starter'
 const version = '1.0.0'
 
 module.exports = {
