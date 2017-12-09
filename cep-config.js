@@ -44,11 +44,11 @@ module.exports = {
       // keychain: '',
       // keychainPassword: '',
       identifier: '',
-      resources: `${__dirname}/node_modules/cep-bundler/resources/macos`
+      resources: `${__dirname}/node_modules/cep-packager/resources/macos`
     },
     windows: {
       dest: `${__dirname}/dist/${version}.exe`,
-      resources: `${__dirname}/node_modules/cep-bundler/resources/windows`
+      resources: `${__dirname}/node_modules/cep-packager/resources/windows`
     },
     paths: {
       // cwd: __dirname + '/work'
