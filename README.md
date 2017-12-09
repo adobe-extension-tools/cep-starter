@@ -1,12 +1,12 @@
-# cep-starter
+# Starter Kit for building CEP extensions
 
 This is a "starter kit" for developing CEP panels.
 It relies on `cep-bundler` to do the heavy lifting.
 
 The `cep-bundler` does a bunch of things to make your life easier:
 
-- Compile your TypeScript code into a single .js file
-- Create the necessary xml files (`CSXS/manifest.xml` and `.debug`) based on your `cep-config.js`
+- Compile your [TypeScript](http://www.typescriptlang.org) code into a single `.js` file
+- Create the necessary xml files ([CSXS/manifest.xml](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_8.x/Documentation/CEP%208.0%20HTML%20Extension%20Cookbook.md#extension-manifest) and [.debug](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_8.x/Documentation/CEP%208.0%20HTML%20Extension%20Cookbook.md#remote-debugging)) based on your `cep-config.js`
 - Create a symlink into the extensions folder so you can test out the extension quickly
 - "Live Reloads" the code whenever you save a file for instant updates while developing
 - Syncs your `node_modules` (**not** the `devDependencies`) into the bundle
@@ -16,13 +16,17 @@ For a more detailed explaination, see [under the hood](#under-the-hood)
 
 # Topics
 
-- [Requirement](#requirement)
+- [Requirements](#requirements)
 - [Installing](#installing)
 - [Developing](#developing)
 - [Building and Packaging](#building-and-packaging)
+- [How to](#how-to)
+  - [Use a node module](#use-a-node-module)
+  - [Add a stylesheet](#add-a-stylesheet)
+  - [Change the html template](#change-the-html-template)
 - [Under the hood](#under-the-hood)
 
-## Requirements
+# Requirements
 
 **For developing:**
 
@@ -38,7 +42,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install makensis
 ```
 
-## Installing
+# Installing
 
 ```shell
 git clone git@github.com:adobe-extension-tools/cep-starter.git
@@ -46,7 +50,7 @@ cd cep-starter
 npm install
 ```
 
-## Developing
+# Developing
 
 ```shell
 npm start
@@ -60,13 +64,84 @@ If you are using version CC2017 or older, go to the settings page (little cog ic
 
 Happy coding!
 
-## Building and Packaging
+# Building and Packaging
 
 ```shell
 npm run package
 ```
 
-## Under the hood
+# How To
+
+This tool makes a lot of things easier, but some things are a bit strange.  
+The strange things are explained below, hopefully it makes sense.
+
+## Use a node module
+
+// todo: write why we have to require node modules in this strange way
+
+```ts
+import { nodeRequire } from './utils'
+
+const rimraf = nodeRequire('rimraf')
+```
+
+## Add a stylesheet
+
+You can put any kind of file in the `assets` folder and it will be put into the `build` folder.
+This way, when `browserify` is putting your bundle together, you have access to the files in there.
+Don't use the `import ... from ...` syntax, TypeScript will trip over this (only supports loading .ts or .js files)
+However, you can still use the require syntax, as shown below.
+Just make sure you have a browserify transform configured that transform (in this example) the .scss into a css string.
+
+```ts
+const style = require('./assets/style/style.scss')
+loadStyle(style)
+
+function loadStyle(style: string) {
+  let styleEl = document.getElementById('style')
+  if (!styleEl) {
+    const newStyle: HTMLStyleElement = document.createElement('style')
+    newStyle.id = 'style'
+    newStyle.type = 'text/css'
+    newStyle.innerHTML = style
+    document.body.appendChild(newStyle)
+    styleEl = newStyle
+  }
+}
+```
+
+To add a transform to browserify, add the following section to your `cep-config.js`
+
+```js
+module.exports = {
+  bundler: {
+    // ...cut...
+    browserify: {
+      js: {
+        transform: [
+          require('sassify')
+        ]
+      }
+    }
+    // ...cut...
+  }
+}
+```
+
+And make sure to install the sassify transform
+
+```shell
+npm install --save-dev sassify
+```
+
+## Change the html template
+
+You can add a `htmlTemplate` key to you `cep-config.js` that should have a `Function` as it's value.
+You can use the "core" html template as an example which can be found [here](https://github.com/adobe-extension-tools/cep-bundler/blob/master/src/templates/html.ts)
+
+Make sure to leave the `<script>` tags in there!
+
+# Under the hood
 
 When you run `npm run build` the following things happen:
 

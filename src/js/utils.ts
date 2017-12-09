@@ -1,4 +1,4 @@
-export function nodeRequire<T = any>(libPath: string): T {
+export function nodeRequire(libPath: string) {
   // save browserify / webpack's require
   const originalRequire = require
   // replace it with the actual node require
