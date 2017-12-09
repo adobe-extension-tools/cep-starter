@@ -25,6 +25,7 @@ For a more detailed explaination, see [under the hood](#under-the-hood)
   - [Add a stylesheet](#add-a-stylesheet)
   - [Change the html template](#change-the-html-template)
 - [Under the hood](#under-the-hood)
+- [Credits](#credits)
 
 # Requirements
 
@@ -178,3 +179,7 @@ When you run `npm start` the following things happen:
 | typescriptWatchJsx   | Compiles `src/jsx/**.ts` into `build/jsx/**.js` and watches for changes               |
 | browserifyWatchJsx   | Compiles `build/js/**.js` into `$BUNDLE/index.jsx`, watches for changes, live reloads |
 | browserifyWatchJs    | Compiles `build/jsx/**.js` into `$BUNDLE/index.js`, watches for changes, live reloads |
+
+# Credits
+
+I have made these tools while working on extensions for [MtMograph](www.mtmograph.com). If you like it, please consider buying one of our extensions for After Effects!
