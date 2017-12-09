@@ -6,7 +6,7 @@ It relies on `cep-bundler` to do the heavy lifting.
 The `cep-bundler` does a bunch of things to make your life easier:
 
 - Compile your [TypeScript](http://www.typescriptlang.org) code into a single `.js` file
-- Create the necessary xml files ([CSXS/manifest.xml](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_8.x/Documentation/CEP%208.0%20HTML%20Extension%20Cookbook.md#extension-manifest) and [.debug](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_8.x/Documentation/CEP%208.0%20HTML%20Extension%20Cookbook.md#remote-debugging)) based on your `cep-config.js`
+- Create the necessary xml files ([CSXS/manifest.xml](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_8.x/Documentation/CEP%208.0%20HTML%20Extension%20Cookbook.md#extension-manifest)) and [.debug](https://github.com/Adobe-CEP/CEP-Resources/blob/master/CEP_8.x/Documentation/CEP%208.0%20HTML%20Extension%20Cookbook.md#remote-debugging)) based on your `cep-config.js`
 - Create a symlink into the extensions folder so you can test out the extension quickly
 - "Live Reloads" the code whenever you save a file for instant updates while developing
 - Syncs your `node_modules` (**not** the `devDependencies`) into the bundle
