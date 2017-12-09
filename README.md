@@ -14,13 +14,21 @@ The `cep-bundler` does a bunch of things to make your life easier:
 
 For a more detailed explaination, see [under the hood](#under-the-hood)
 
-## requirements
+# Topics
+
+- [Requirement](#requirement)
+- [Installing](#installing)
+- [Developing](#developing)
+- [Building and Packaging](#building-and-packaging)
+- [Under the hood](#under-the-hood)
+
+## Requirements
 
 **For developing:**
 
 - node.js
 
-**For packaging installers:**
+**For creating installers:**
 
 - brew
 - makensis
@@ -30,7 +38,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install makensis
 ```
 
-## install
+## Installing
 
 ```shell
 git clone git@github.com:adobe-extension-tools/cep-starter.git
@@ -38,7 +46,7 @@ cd cep-starter
 npm install
 ```
 
-## develop
+## Developing
 
 ```shell
 npm start
@@ -52,13 +60,13 @@ If you are using version CC2017 or older, go to the settings page (little cog ic
 
 Happy coding!
 
-## build & package
+## Building and Packaging
 
 ```shell
 npm run package
 ```
 
-## under the hood
+## Under the hood
 
 When you run `npm run build` the following things happen:
 
