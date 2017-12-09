@@ -30,7 +30,7 @@ function evalJsx(code: string): Promise<void> {
 }
 
 function loadJsx(): void {
-  // this require is needed for the brfs module
+  // this require is needed for the brfs transform module
   const fs = require('fs')
   // this fs.readFileSync will be replaced with the contents of the bundle file by brfs
   // the JSX_BUNDLE_PATH environment variable is provided by the bundler
