@@ -21,10 +21,82 @@ module.exports = {
       version: version,
       apps: [
         {
-          id: 'AEFT',
+          id: 'PHXS',
+          from: '1.0',
+          to: '99.9',
+          port: '4000'
+        },
+        {
+          id: 'PHSP',
           from: '1.0',
           to: '99.9',
           port: '4001'
+        },
+        {
+          id: 'IDSN',
+          from: '1.0',
+          to: '99.9',
+          port: '4002'
+        },
+        {
+          id: 'AICY',
+          from: '1.0',
+          to: '99.9',
+          port: '4002'
+        },
+        {
+          id: 'ILST',
+          from: '1.0',
+          to: '99.9',
+          port: '4003'
+        },
+        {
+          id: 'PPRO',
+          from: '1.0',
+          to: '99.9',
+          port: '4004'
+        },
+        {
+          id: 'PRLD',
+          from: '1.0',
+          to: '99.9',
+          port: '4005'
+        },
+        {
+          id: 'AEFT',
+          from: '1.0',
+          to: '99.9',
+          port: '4006'
+        },
+        {
+          id: 'FLPR',
+          from: '1.0',
+          to: '99.9',
+          port: '4007'
+        },
+        {
+          id: 'AUDT',
+          from: '1.0',
+          to: '99.9',
+          port: '4008'
+        },
+        {
+          id: 'DRWV',
+          from: '1.0',
+          to: '99.9',
+          port: '4009'
+        },
+        {
+          id: 'MUSE',
+          from: '1.0',
+          to: '99.9',
+          port: '4010'
+        },
+        {
+          id: 'KBRG',
+          from: '1.0',
+          to: '99.9',
+          port: '4011'
         }
       ]
     }
