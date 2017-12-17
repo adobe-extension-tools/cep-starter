@@ -7,9 +7,8 @@ import { AppContainer} from 'react-hot-loader'
 import App from './components/App'
 import getStore from './redux/getStore'
 import { Provider } from 'react-redux'
-import './browserShim'
-
-window.localStorage.debug = '*'
+import './core/browserShim'
+import { csInterface } from './core'
 
 declare global {
   interface NodeModule {
@@ -17,11 +16,29 @@ declare global {
   }
   interface Window {
     nodeRequire: any;
+    didSetupHandlers: boolean;
     __REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any;
     __REDUX_DEVTOOLS_EXTENSION__: any;
     __adobe_cep__: any;
   }
 }
+
+window.localStorage.debug = '*'
+
+// only add listeners when not already added (livereload)
+if (!window.didSetupHandlers) {
+  // handle console.log / console.error events from JSX
+  csInterface.addEventListener('CONSOLE_LOG', (e) => {
+    console.log.apply(console, e.data)
+  })
+  csInterface.addEventListener('CONSOLE_WARN', (e) => {
+    console.warn.apply(console, e.data)
+  })
+  csInterface.addEventListener('CONSOLE_ERROR', (e) => {
+    console.error.apply(console, e.data)
+  })
+}
+window.didSetupHandlers = true
 
 function evalJsx(code: string): Promise<void> {
   return new Promise(resolve => {
