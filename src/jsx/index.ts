@@ -1,3 +1,5 @@
+import 'extendscript-es5-shim-ts'
+
 function run() {
   if (app.project.activeItem === null || !(app.project.activeItem instanceof CompItem)) return
   const comp = app.project.activeItem
