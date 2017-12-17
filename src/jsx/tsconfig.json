@@ -4,6 +4,8 @@
     "allowJs": true,
     "target": "es3",
     "strict": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
     "noLib": true,
     "types": [
       "AfterEffects/2018"
