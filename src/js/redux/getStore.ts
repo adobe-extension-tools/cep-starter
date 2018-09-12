@@ -1,20 +1,20 @@
 import { Store, createStore, applyMiddleware } from 'redux'
 import { reducers, RootState } from './index'
-import { composeWithDevTools } from 'remote-redux-devtools'
+// import { composeWithDevTools } from 'remote-redux-devtools'
 import AppMiddleware from './middlewares/appMiddleware'
 
 let store: Store<RootState>
 
 export default function getStore() {
   if (!store) {
-    const composeEnhancers = composeWithDevTools({
-      realtime: true
-    })
+    // const composeEnhancers = composeWithDevTools({
+    //   realtime: true
+    // })
     store = createStore(
       reducers,
-      composeEnhancers(applyMiddleware(
+      applyMiddleware(
         AppMiddleware()
-      ))
+      )
     )
   }
   return store

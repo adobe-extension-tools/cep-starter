@@ -1,0 +1,99 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to PHXS",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4000,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to PHSP",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4001,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to IDSN",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4002,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to AICY",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4002,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to ILST",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4003,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to PPRO",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4004,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to PRLD",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4005,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to AEFT",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4006,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to FLPR",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4007,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to AUDT",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4008,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to DRWV",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4009,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to MUSE",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4010,
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach to KBRG",
+            "type": "chrome",
+            "request": "attach",
+            "port": 4011,
+            "sourceMaps": true
+        }
+    ]
+}

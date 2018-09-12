@@ -3,30 +3,27 @@
   "version": "0.0.2",
   "description": "A starter project for developing CEP extensions using cep-bundler and cep-packager",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.0.0",
     "@types/debug": "0.0.30",
     "@types/node": "^8.0.26",
     "@types/react": "^16.0.9",
     "@types/react-dom": "^16.0.0",
     "@types/react-hot-loader": "^3.0.4",
-    "@types/react-redux": "^5.0.10",
-    "@types/remote-redux-devtools": "^0.5.0",
+    "@types/react-redux": "^6.0.7",
+    "@types/remote-redux-devtools": "^0.5.3",
     "babel-polyfill": "^6.26.0",
-    "cep-bundler": "^0.0.9",
-    "cep-packager": "^0.0.12",
     "debug": "^3.0.1",
     "extendscript-es5-shim-ts": "0.0.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-hot-loader": "^3.0.0-beta.7",
-    "react-redux": "^5.0.6",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-hot-loader": "^4.0.0",
+    "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "redux-simple-logger": "0.0.4",
-    "redux-thunk": "^2.2.0",
-    "remote-redux-devtools": "^0.5.12",
-    "types-for-adobe": "github:pravdomil/types-for-adobe",
-    "typescript": "^2.6.2"
+    "redux-thunk": "^2.3.0",
+    "remote-redux-devtools": "^0.5.13",
+    "types-for-adobe": "github:pravdomil/types-for-adobe"
   },
   "scripts": {
     "start": "cep-bundler",
@@ -34,5 +31,7 @@
     "package": "cep-bundler build && cep-packager"
   },
   "author": "Koen Schmeets",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+  }
 }

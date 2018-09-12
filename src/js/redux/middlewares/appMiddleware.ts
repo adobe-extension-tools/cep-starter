@@ -1,4 +1,4 @@
-import debug from 'debug'
+import * as debug from 'debug'
 import { Dispatch, Middleware, MiddlewareAPI } from 'redux'
 import { TypeKeys } from '../modules/app'
 import { RootState } from '..'

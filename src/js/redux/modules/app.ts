@@ -42,7 +42,7 @@ export const actionCreators = {
 
 export type AppActionCreators = typeof actionCreators
 
-export const reducer: Reducer<AppState> = (state: AppState = initialState, action: ActionTypes) => {
+export const reducer: Reducer<AppState> = (state: AppState = initialState, action) => {
   switch (action.type) {
     case TypeKeys.INCREMENT:
       return {

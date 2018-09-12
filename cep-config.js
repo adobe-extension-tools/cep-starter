@@ -8,6 +8,7 @@ module.exports = {
     build: 'build',
     dest: 'bundle',
     devPort: 5000,
+    live: true,
     manifest: {
       name: name,
       bundleId: bundleId,

@@ -23,18 +23,18 @@ declare global {
   }
 }
 
-window.localStorage.debug = '*'
+window.localStorage.setItem('debug', '*')
 
 // only add listeners when not already added (livereload)
 if (!window.didSetupHandlers) {
   // handle console.log / console.error events from JSX
-  csInterface.addEventListener('CONSOLE_LOG', (e) => {
+  csInterface.addEventListener('CONSOLE_LOG', (e: any) => {
     console.log.apply(console, e.data)
   })
-  csInterface.addEventListener('CONSOLE_WARN', (e) => {
+  csInterface.addEventListener('CONSOLE_WARN', (e: any) => {
     console.warn.apply(console, e.data)
   })
-  csInterface.addEventListener('CONSOLE_ERROR', (e) => {
+  csInterface.addEventListener('CONSOLE_ERROR', (e: any) => {
     console.error.apply(console, e.data)
   })
 }

@@ -11,7 +11,7 @@ if (!window.__adobe_cep__) {
 }
 
 if (!window.nodeRequire) {
-  window.nodeRequire = function (pkg) {
+  window.nodeRequire = function (pkg: string) {
     if (pkg === 'fs') {
       return {
         readFileSync: () => '',

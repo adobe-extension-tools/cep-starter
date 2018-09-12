@@ -6,9 +6,10 @@
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
-    "strict": false,
-    "sourceMap": false,
-    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "",
     "lib": ["es2015", "dom"]
   },
   "include": [

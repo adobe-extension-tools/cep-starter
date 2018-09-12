@@ -42,7 +42,7 @@ export const actionCreators = {
 
 export type RouterActionCreators = typeof actionCreators
 
-export const reducer: Reducer<RouterState> = (state: RouterState = initialState, action: ActionTypes) => {
+export const reducer: Reducer<RouterState> = (state: RouterState = initialState, action) => {
   switch (action.type) {
     case TypeKeys.PUSH:
       return {
