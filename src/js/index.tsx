@@ -9,6 +9,7 @@ import getStore from './redux/getStore'
 import { Provider } from 'react-redux'
 import './core/browserShim'
 import { csInterface } from './core'
+import './assets/style.scss'
 
 declare global {
   interface NodeModule {
@@ -63,7 +64,6 @@ function getAppEl() {
     appEl.id = 'app'
     appEl.style.width = '100%'
     appEl.style.height = '100%'
-    appEl.style.backgroundColor = '#ffffff'
     document.body.appendChild(appEl)
   }
   return appEl

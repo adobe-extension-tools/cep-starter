@@ -8,7 +8,8 @@
     "moduleResolution": "node",
     "noLib": true,
     "types": [
-      "AfterEffects/2018"
+      "AfterEffects/2018",
+      "shared/PlugPlugExternalObject"
     ],
     "typeRoots": [
       "../../node_modules/types-for-adobe"

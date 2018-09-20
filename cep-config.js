@@ -100,6 +100,13 @@ module.exports = {
           port: '4011'
         }
       ]
+    },
+    browserify: {
+      js: {
+        transform: [
+          require('sassify')
+        ]
+      }
     }
   },
   packager: {
